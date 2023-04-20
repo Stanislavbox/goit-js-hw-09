@@ -11,9 +11,9 @@ stopBtn.disabled = true;
 
 startBtn.addEventListener("click", (evt) => {
       evt.preventDefault();
+      startBtn.disabled = true;
+      stopBtn.disabled = false;
       timerId = setInterval(() => {
-            startBtn.disabled = true;
-            stopBtn.disabled = false;
             document.body.style.backgroundColor = getRandomHexColor();
       }, 1000);
 });
